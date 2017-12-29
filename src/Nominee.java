@@ -1,11 +1,33 @@
 public class Nominee {
 
-
     static {
         System.out.println("Init Nominee class");
     }
 
     private String name;
+    private int nomineeAwardQuantityLimit;
+    private float nomineeAwardAmountLimit;
+
+    public int getNomineeAwardQuantityLimit() {
+        return nomineeAwardQuantityLimit;
+    }
+
+    public float getNomineeAwardAmountLimit() {
+        return nomineeAwardAmountLimit;
+    }
+
+    public void setNomineeAwardQuantityLimit(int nomineeAwardQuantityLimit) {
+        this.nomineeAwardQuantityLimit = nomineeAwardQuantityLimit;
+    }
+
+    public void setNomineeAwardAmountLimit(float nomineeAwardAmountLimit) {
+        this.nomineeAwardAmountLimit = nomineeAwardAmountLimit;
+    }
+
+    public Nominee(int nomineeAwardQuantityLimit, float nomineeAwardAmountLimit) {
+        this.nomineeAwardQuantityLimit = nomineeAwardQuantityLimit;
+        this.nomineeAwardAmountLimit = nomineeAwardAmountLimit;
+    }
 
     public Nominee(String name) {
         this.name = name;
@@ -31,3 +53,4 @@ public class Nominee {
 
     }
 }
+

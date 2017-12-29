@@ -22,11 +22,11 @@ public class Lection3Task {
         adam.receiveAward(e);
         adam.receiveAward(f);
 
+
         double quantityB, quantityD, quantityF;
         double randomC;
         int randomZ;
         Random rand = new Random();
-
 
         randomZ = rand.nextInt(50);
         randomC = rand.nextDouble();
@@ -42,6 +42,27 @@ public class Lection3Task {
         randomC = rand.nextDouble();
         quantityF = calculateQuantity(randomC, 3, randomZ, f.getValue());
         System.out.println("Quantity F: " + quantityF);
+
+
+        /**
+         * create new object Nominator with parameters: max quantity of award that can give Nominator; max amount of award that can give Nominator
+         * */
+        Nominator nominator = new Nominator(5, 500.00f);
+
+        /**
+         * create new object Nominee with parameters: max quantity of award that can receive Nominee; max amount of award that can receive Nominee
+         */
+        Nominee nominee = new Nominee (5, 500.00f);
+
+        Nominator mike;
+        mike = new Nominator("Mike");
+        mike.giveAward(a);
+        mike.giveAward(b);
+        mike.giveAward(c);
+        mike.giveAward(d);
+        mike.giveAward(e);
+        mike.giveAward(f);
+
 
         if (quantityB >= quantityD) {
             System.out.println("Quantity of James's awardB is not less than Quantity of David's awardD");
@@ -74,9 +95,12 @@ public class Lection3Task {
         }
     }
 
+
     private static double calculateQuantity(double c, int population, int z, int p) {
         double quantity;
         quantity = ((z ^ 2 * (p) * (1 - p)) / (c * c)) / (1 + ((((z ^ 2 * (p) * (1 - p)) / (c * c)) - 1) / population));
         return quantity;
     }
+
+
 }

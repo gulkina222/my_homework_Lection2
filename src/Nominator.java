@@ -6,6 +6,30 @@ public class Nominator {
     }
 
     private String name;
+    private int nominatorAwardQuantityLimit;
+    private float nominatorAwardAmountLimit;
+
+
+    public int getNominatorAwardQuantityLimit() {
+        return nominatorAwardQuantityLimit;
+    }
+
+    public float getNominatorAwardAmountLimit() {
+        return nominatorAwardAmountLimit;
+    }
+
+    public void setNominatorAwardQuantityLimit(int nominatorAwardQuantityLimit) {
+        this.nominatorAwardQuantityLimit = nominatorAwardQuantityLimit;
+    }
+
+    public void setNominatorAwardAmountLimit(float nominatorAwardAmountLimit) {
+        this.nominatorAwardAmountLimit = nominatorAwardAmountLimit;
+    }
+
+    public Nominator(int nominatorAwardQuantityLimit, float nominatorAwardAmountLimit) {
+        this.nominatorAwardQuantityLimit = nominatorAwardQuantityLimit;
+        this.nominatorAwardAmountLimit = nominatorAwardAmountLimit;
+    }
 
     public Nominator(String name) {
         this.name = name;
@@ -17,4 +41,11 @@ public class Nominator {
         nominee.receiveAward(award);
 
     }
+
+    public void giveAward(Award award) {
+
+    }
+
 }
+
+
